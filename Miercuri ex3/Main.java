@@ -3,25 +3,29 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        int [] a = {1,2,3,999,4};
-        int max = a[0];
-        int min = a[0];
+//        int [] a = {1,2,3,999,4};
+
+
         int dif = 0;
-
-        if(a.length > 1) {
-            for (int i = 0; i < a.length; i++) {
-                    if(a[i] > max){
-                    max = a[i];
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Cate numere folositi?");
+        int n = sc.nextInt();
+        int[] array = new int[n];
+        System.out.println("Introduceti numerele folosite: ");
+        for (int i = 0; i < n; i++) {
+            array[i] = sc.nextInt();
+        }
+        int max = array[0];
+        int min = array[0];
+        if(array.length >= 2) {
+            for (int i = 0; i <= array.length - 1; i++) {
+                    if(max < array[i]){
+                    max = array[i];
                 }
-                    if(a[i] < min){
-                        min = a[i];
+                    if(min > array[i]){
+                        min = array[i];
                     }
-
-            }
-
-        } else System.out.println(a[0]);
-
-        dif = max - min;
-        System.out.println(dif);
+            } System.out.println(max - min);
+        }
     }
 }
