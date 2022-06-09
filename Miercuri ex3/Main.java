@@ -4,9 +4,6 @@ public class Main {
     public static void main(String[] args) {
 
 //        int [] a = {1,2,3,999,4};
-
-
-        int dif = 0;
         Scanner sc = new Scanner(System.in);
         System.out.println("Cate numere folositi?");
         int n = sc.nextInt();
